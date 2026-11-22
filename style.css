@@ -1,50 +1,100 @@
-body {
-    background-color: #f4f4f9;
-    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0;
-    color: #333;
+    align-items: flex-start;
+    padding: 30px 15px;
+    color: #191e2b;
 }
-.container {
- max-width: 400px;
- margin: 30px auto;
- background-color: black;
- padding: 25px;
- border-radius: 12px;
- box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
- position: relative;
+.app-container {
+ width: 100%;
+ max-width: 460px;
+ background-color: #ffffff;
+ padding: 28px;
+ border-radius: 16px;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
-.top-summary {
+header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+}
+header .subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 4px;
+}
+.balance-card {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+.balance-card .label {
+    font-size: 13px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+.balance-card .h2 {
+    font-size: 32px;
+    margin-top: 6px;
+    font-weight: 700;
+}
+.summary-card {
+    
+    margin-bottom: 16px;
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 14px;
+    gap: 12px;
 }
-.summary-item span {
-    color: #6c757d;
-    display: block;
-    flex-direction: column;
-    text-align: right;
-}
-.summary-item p {
-    margin: 2px 0 0 0;
-    font-weight: bold;
-    font-size: 15px;
-    color: #27ae60;
-}
-.summary-item p.plus {
-    color: #27ae60;
-}
-.summary-item p.minus {
-    color: #e74c3c;
-}
+.summary-card .card {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 12px;
+    border: 1px solid #e9e8f0;
+    border-radius: 10px;
+    text-align: center;
 
+}
+.summary-card h3 {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.income-card p {
+    font-size: 17px;
+    color: #16a34a;
+    font-weight: 700;
+}
+.expense-card p {
+    font-size: 17px;
+    color: #dc2626;
+    font-weight: 700;
+}
+.advice-box {
+    background-color: #eff6ff;
+    padding: 11px 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+}
 
 h1 {color:blue;
      font-size: 40px;
