@@ -26,14 +26,33 @@ body {
     margin-bottom: 15px;
     font-size: 14px;
 }
+.summary-item span {
+    color: #6c757d;
+    display: block;
+    flex-direction: column;
+    text-align: right;
+}
+.summary-item p {
+    margin: 2px 0 0 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: #27ae60;
+}
+.summary-item p.plus {
+    color: #27ae60;
+}
+.summary-item p.minus {
+    color: #e74c3c;
+}
+
 
 h1 {color:blue;
      font-size: 40px;
-     text-align: center;
+     text-align: top-middle;
      margin-bottom: 20px;
     }
 .balance-box {
-    background-color: #f8f9fa;
+    background-color: linear-gradient(135deg, #f8f9fa, #e9ecef);
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -59,6 +78,11 @@ input,select {
     border-radius: 6px;
     font-size: 14px;
     box-sizing: border-box;
+}
+input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 button {
     width: 100%;
