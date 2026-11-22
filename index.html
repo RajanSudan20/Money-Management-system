@@ -10,17 +10,24 @@
 <body>
     <div class="container">
         <h1>Money Management System</h1>
-        <div class="Top-summary">
-        <div class="Summary-item">
+        <div class="Balance-Box">
+        <p>"Total Balance"</p>
+        <h2 id="balance">₹0.00</h2>
+        </div>
+        <div class="Sub-Summary">
+            <div class="income-box">
         <span>Income</span>
-        <p id="income" class="plus">₹0.00</p>
+        <div class="Expense-box">
+            <span>Expense</span>
+            <p id="expense">₹0.00</p>
         </div>
-        <div class="Summary-item">
-        <span>Expense</span>
-        <p id="expense" class="minus">₹0.00</p>
-        </div>
-        </div>
-        <h1>Money Management System</h1>
+     </div>
+ </div>
+ <div id="Budget-Advice" class="advice-box">
+    <p id="advice-text">Your budget is balanced. Keep up the good work!</p>
+</div>
+        
+    
         <div class="balance-box">
             <p>"Total Balance"</p>
             <h2 id="balance">₹0.00</h2>
@@ -41,8 +48,8 @@
     </select>
     <button type="submit">Add Transaction</button>
 </form>
-
-   <ul id="transaction-list"></ul>
+<h3>Transaction History</h3>
+<ul id="transaction-list"></ul>
     <script src="script.js"></script>
  </div>
  <div class="inc-exp-container">
