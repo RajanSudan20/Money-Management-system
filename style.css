@@ -2,7 +2,7 @@ body {
     background-color: #f4f4f9;
     font-family: Arial, sans-serif;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,4 +68,19 @@ button {
 }
 button:hover {
     background-color: #2980b9;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+ul li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
