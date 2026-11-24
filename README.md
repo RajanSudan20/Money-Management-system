@@ -1,6 +1,20 @@
 💸 Pocket Money Tracker
 Hey there! 👋 This is a simple, clean, and lightweight web application I built to keep track of my daily pocket money, expenses, and savings without any complicated bloat.
 
+https://github.com/user-attachments/assets/d5f40dc7-4504-4995-bf53-66199b4153ec
+
+
+
+
+
+
+
+
+
+
+
+
+
 ✨ What does it do?
 Real-time Balance: Instantly calculates your total balance, total income, and total expenses as you add new items.
 
