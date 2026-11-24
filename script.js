@@ -10,7 +10,7 @@ const textInput = document.getElementById('text');
 const amountInput = document.getElementById('amount');
 const transactionList = document.getElementById('transaction-list');
 const typeinput = document.getElementById('type');
-const AdvicetextElement = document.getElementById('advice-text');
+const adviceTextEl = document.getElementById('advice-text');
 
 function updateLocalStorage() {
     localStorage.setItem('transactions', JSON.stringify(transactions));
@@ -27,9 +27,9 @@ if (textInput.value.trim() === '' || amountInput.value.trim() === '') {
         alert('Please enter a valid number for amount');
         return;
     }
-    let finalamount = rawamount;
-    if (typeinput.value === 'expense') {
-        finalamount = -Math.abs(rawamount);
+    let finalamount = Math.abs(rawamount);
+    if (typeinput.value !== 'Income/Earning' && typeinput.value !== 'Salary') {
+        finalamount = -finalamount;
     }
 const transaction = {
         id: Date.now(),
@@ -40,12 +40,14 @@ const transaction = {
     transactions.push(transaction);
     updateLocalStorage();
     form.reset();
+    init();
 });
 function removeTransaction(id) {
     transactions = transactions.filter(function(item) {
         return item.id !== id;
     });
     updateLocalStorage();
+    init();
 }
 
 function init() {
@@ -54,7 +56,7 @@ function init() {
     let totalExpense = 0;
     transactions.forEach(function(item) {
         const sign = item.amount > 0 ? '+' : '-';
-        const itemclass = item.amount > 0 ? 'income' : 'expense';
+        const itemclass = item.amount > 0 ? 'plus' : '.minus';
         const listItem = document.createElement('li');
  
         listItem.classList.add(itemclass);
@@ -65,7 +67,7 @@ function init() {
            
          </div>
          <div style="display:flex; align-item: center;">
-         <span style="font-weight:600; color${item.ammount < 0 ? '#dc2626' : '#16a34a'};">
+         <span style="font-weight:600; color:${item.amount < 0 ? '#dc2626' : '#16a34a'};">
          ${sign}₹${Math.abs(item.amount).toFixed(2)}
                 </span>
                 <button class="delete-btn" onclick="removeTransaction(${item.id})">&times;</button>
@@ -107,6 +109,7 @@ function updateSmartAdvice(income, expense, total) {
     } else {
         adviceTextEl.innerText = 'Your budget is balanced. Keep up the good work!';
     }
+    init();
 }
 
 
